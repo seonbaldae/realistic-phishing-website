@@ -12,6 +12,21 @@ python3 -m http.server 8080 --bind 127.0.0.1
 
 빌드나 패키지 설치가 필요하지 않습니다. 브라우저 기본 ES Modules를 사용하므로 `index.html`을 파일로 직접 열지 말고 정적 서버로 실행하세요.
 
+## GitHub → Vercel 자동 배포
+
+`vercel.json`에 정적 사이트 설정이 포함되어 있습니다. 프레임워크는 **Other**, 설치·빌드 명령은 비워 두고, 출력 디렉토리는 **`.`**(저장소 루트)를 사용합니다. 의존성이나 환경 변수는 필요하지 않습니다.
+
+자동 배포에는 Vercel과 GitHub 저장소를 최초 한 번 연결해야 합니다. 설정 파일을 푸시하는 것만으로 계정 연결이 만들어지지는 않습니다.
+
+1. [Vercel 새 프로젝트](https://vercel.com/new)를 열고 GitHub 계정으로 로그인합니다.
+2. **Import Git Repository**에서 `seonbaldae/realistic-phishing-website`를 선택합니다. 저장소가 보이지 않으면 Vercel GitHub App에 해당 저장소 접근을 허용합니다.
+3. **Root Directory**를 저장소 루트(`./`), **Framework Preset**을 **Other**로 두고 배포합니다. 저장소의 `vercel.json`이 설치·빌드·출력 설정을 지정합니다.
+4. 프로젝트의 **Settings → Git**에서 연결된 저장소를 확인하고, **Settings → Environments → Production → Branch Tracking**에서 Production Branch가 **main**인지 확인합니다.
+
+연결 후에는 `main`에 푸시할 때마다 Production 배포가 갱신됩니다. 다른 브랜치나 PR에는 Preview 배포가 생성됩니다. 별도의 GitHub Actions나 `VERCEL_TOKEN`은 필요하지 않습니다. 프로젝트가 이미 존재한다면 새 프로젝트를 만들지 말고 해당 프로젝트의 Git 설정에서 이 저장소를 연결하세요.
+
+`.vercelignore`는 CLI 업로드 대상을 정적 사이트 파일로 제한하며, `.gitignore`는 로컬 Vercel 연결 정보(`.vercel/`)가 Git에 포함되는 것을 방지합니다.
+
 ## 시연
 
 1. **설문 참여하기**를 누르면 세션 만료 안내가 나옵니다. 취소 또는 Escape로 닫을 수 있습니다.
