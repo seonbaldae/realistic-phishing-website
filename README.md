@@ -46,6 +46,18 @@ python3 -m http.server 8080 --bind 127.0.0.1
 
 헤더·로그인·푸터의 NAVER 로고는 [네이버 공식 브랜드 리소스](https://www.navercorp.com/company/brandGuide)의 원본 `Logotype_Green.svg`입니다. [공식 배포 자료](https://static-homepage.pstatic.net/cdn-static/naver/download/NaverBrand_Resource.zip)에서 가져온 파일을 `assets/naver-logo.svg`에 그대로 보관하고 `<img>`로 표시합니다. 로고 이미지는 같은 출처에서 제공하며 색상·비율을 변형하지 않습니다.
 
+추가 로고는 `demo-service-logos` 컴포넌트로 설문 소개와 모의 로그인 화면에 표시합니다. 네이버 폼·N 심볼도 헤더, 세션 안내, 설문 작성 및 완료 화면에 배치합니다. 서비스 아이콘은 로고 감지 시연용 이미지이며, 실제 서비스 연결이나 인증 기능은 없습니다.
+
+| 로컬 파일 | 공식 출처 페이지 | 원본 에셋 |
+| --- | --- | --- |
+| `assets/naver-favicon.ico` | [네이버](https://www.naver.com/) | [파비콘 ICO](https://www.naver.com/favicon.ico?1) |
+| `assets/naver-symbol.png` | [네이버](https://www.naver.com/) | [N 심볼 PNG](https://s.pstatic.net/static/www/nFavicon96.png) |
+| `assets/naver-form-icon.svg` | [네이버 폼](https://form.naver.com/) | [폼 아이콘 SVG](https://survey.pstatic.net/nform/icon/favicon.svg) |
+| `assets/naver-map-icon.png` | [네이버 지도](https://map.naver.com/) | [지도 아이콘 PNG](https://ssl.pstatic.net/static/maps/assets/icons/android-icon-192x192.png) |
+| `assets/naver-shopping-icon.ico` | [네이버 쇼핑](https://shopping.naver.com/) | [쇼핑 아이콘 ICO](https://shopv.pstatic.net/web/r/20261028105322/_next/static/ico/favicon_shopping.ico) |
+
+각 공식 페이지의 `icon` 또는 `apple-touch-icon` 링크에서 원본 파일을 가져왔습니다. 브라우저 탭은 네이버 원본 파비콘을, 홈 화면 아이콘은 공식 96×96 N 심볼을 사용합니다. 모두 로컬 자산이므로 페이지 실행 시 네이버 서버로 요청하지 않습니다.
+
 분석기에서 입력 필드 등을 검사할 때는 각 요소의 `shadowRoot` 안까지 순회해야 합니다. Shadow DOM은 보안 격리가 아니며, 이 저장소에는 QR 분석 API나 격리 Worker가 포함되지 않습니다.
 
 이 페이지는 해커톤 보안 훈련용으로 표시된 모의 서비스입니다. 실제 계정 정보를 입력하지 마세요. 정적 서버 로그에는 자산 요청 경로만 남으며, 시연 상태는 새로고침하면 초기화됩니다.

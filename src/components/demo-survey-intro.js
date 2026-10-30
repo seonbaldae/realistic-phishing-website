@@ -12,7 +12,7 @@ export class DemoSurveyIntro extends HTMLElement {
         .cover::before { content: ''; position: absolute; width: 350px; height: 350px; border: 1px solid #b6dec5; border-radius: 50%; right: -76px; bottom: -185px; }
         .cover::after { content: ''; position: absolute; width: 430px; height: 430px; border: 1px solid #c9e6d2; border-radius: 50%; right: -117px; bottom: -225px; }
         .cover-copy { z-index: 1; } .edition { display: flex; align-items: center; gap: 7px; font-size: 10px; letter-spacing: .14em; font-weight: 700; color: #4d8062; margin-bottom: 17px; }
-        .edition::before { content: ''; display: block; width: 15px; height: 1px; background: #63896d; }
+        .edition img { display: block; width: 23px; height: 23px; }
         .cover h2 { font-size: 34px; line-height: 1.4; letter-spacing: -1.3px; font-weight: 750; color: #1b5938; }
         .cover-copy > p { font-size: 12px; margin-top: 14px; color: #61836c; }
         .illustration { position: absolute; right: 37px; width: 265px; height: 218px; z-index: 1; bottom: 0; }
@@ -50,7 +50,7 @@ export class DemoSurveyIntro extends HTMLElement {
       </style>
       <article class="sheet" aria-labelledby="survey-title">
         <div class="cover">
-          <div class="cover-copy"><div class="edition">YOUR EVERYDAY, A LITTLE BETTER</div><h2>당신의 일상을<br>듣고 싶어요.</h2><p>작은 의견이 만드는 더 나은 내일</p></div>
+          <div class="cover-copy"><div class="edition"><img src="./assets/naver-symbol.png" alt="NAVER" width="96" height="96">YOUR EVERYDAY, A LITTLE BETTER</div><h2>당신의 일상을<br>듣고 싶어요.</h2><p>작은 의견이 만드는 더 나은 내일</p></div>
           <svg class="illustration" viewBox="0 0 280 230" fill="none" aria-hidden="true">
             <ellipse cx="157" cy="221" rx="100" ry="9" fill="#d4e9d9"/>
             <path d="M234 69v14m-7-7h14M42 113v10m-5-5h10" stroke="#86b698" stroke-width="2" stroke-linecap="round"/>
@@ -69,6 +69,7 @@ export class DemoSurveyIntro extends HTMLElement {
           <span class="status">참여 가능 · 모의 설문</span>
           <h1 id="survey-title" tabindex="-1"></h1>
           <p class="description"></p>
+          <demo-service-logos></demo-service-logos>
           <dl class="metadata">
             <div><dt class="meta-label"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2" stroke="currentColor"/><path d="M5 1v4m6-4v4M2 7h12" stroke="currentColor"/></svg>참여 기간</dt><dd class="period"></dd></div>
             <div><dt class="meta-label"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor"/><path d="M8 4v4l3 2" stroke="currentColor"/></svg>예상 소요 시간</dt><dd class="duration"></dd></div>

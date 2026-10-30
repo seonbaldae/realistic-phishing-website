@@ -10,9 +10,10 @@ class DemoSurveyForm extends HTMLElement {
         :host { display: block; width: 100%; max-width: 760px; margin: 0 auto; }
         .survey-heading { padding: 30px 32px; background: #fff; border: 1px solid #e3e7e6; border-top: 5px solid var(--green, #03c75a); border-radius: 12px; }
         .heading-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
-        .section-label { color: #058b47; font-size: 13px; font-weight: 700; letter-spacing: .025em; }
+        .section-label { display: inline-flex; align-items: center; gap: 8px; color: #058b47; font-size: 13px; font-weight: 700; letter-spacing: .025em; }
+        .section-label img { display: block; width: 25px; height: 25px; }
         .account { display: inline-flex; align-items: center; gap: 6px; padding: 6px 9px; background: #f2f8f4; border-radius: 5px; color: #33734c; font-size: 11px; }
-        .account svg { width: 13px; height: 13px; }
+        .account img { display: block; width: 16px; height: 16px; }
         h1 { margin: 0; color: #202924; font-size: 25px; letter-spacing: -1px; line-height: 1.5; }
         .description { margin: 12px 0 25px; color: #737c77; font-size: 13px; line-height: 1.8; }
         .progress-label { display: flex; align-items: center; justify-content: space-between; color: #5c6861; font-size: 12px; }
@@ -52,9 +53,9 @@ class DemoSurveyForm extends HTMLElement {
       <form novalidate autocomplete="off">
         <section class="survey-heading" aria-labelledby="survey-title">
           <div class="heading-top">
-            <span class="section-label">설문 참여</span>
+            <span class="section-label"><img src="./assets/naver-form-icon.svg" alt="네이버 폼" width="32" height="32">설문 참여</span>
             <span class="account">
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 10 3.2 3.2L15 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <img src="./assets/naver-symbol.png" alt="NAVER" width="96" height="96">
               가상 계정으로 참여 중
             </span>
           </div>

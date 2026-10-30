@@ -22,6 +22,7 @@ export class DemoLoginForm extends HTMLElement {
         .tab { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0 30px;
           padding: 16px 0; border: 1px solid #dce4df; border-bottom: 2px solid #03c75a;
           border-radius: 8px 8px 0 0; color: #193b27; font-size: 14px; font-weight: 700; }
+        .tab img { display: block; width: 22px; height: 22px; }
         .content { padding: 29px 30px 30px; }
         h1 { margin: 0 0 10px; font-size: 22px; letter-spacing: -1px; line-height: 1.45; }
         .description { margin: 0 0 23px; color: #758078; font-size: 13px; line-height: 1.8; word-break: keep-all; }
@@ -52,7 +53,7 @@ export class DemoLoginForm extends HTMLElement {
       <section class="card" aria-labelledby="login-title">
         <div class="brand"><img src="./assets/naver-logo.svg" alt="NAVER" width="2315" height="444"></div>
         <div class="tab">
-          <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="12" cy="10" r="2.5"/><path d="M7 18c0-5 10-5 10 0"/></svg>
+          <img src="./assets/naver-symbol.png" alt="NAVER" width="96" height="96">
           ID 로그인
         </div>
         <div class="content">
@@ -82,6 +83,7 @@ export class DemoLoginForm extends HTMLElement {
         </div>
         <div class="bottom"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m12 2 8 3v6c0 5-8 11-8 11S4 16 4 11V5Z"/><path d="m8 11 3 3 5-5"/></svg> 실제 인증 · 정보 저장 · 외부 전송 없음</div>
       </section>
+      <demo-service-logos compact></demo-service-logos>
       <p class="page-note">이 화면은 네이버가 운영하는 로그인 페이지가 아닙니다.<br>QR 피싱 예방 서비스의 시연을 위해 제작되었습니다.</p>
     `;
   }

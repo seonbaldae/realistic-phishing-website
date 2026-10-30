@@ -1,5 +1,6 @@
 import './components/demo-training-notice.js';
 import './components/demo-header.js';
+import './components/demo-service-logos.js';
 import './components/demo-survey-intro.js';
 import './components/demo-session-notice.js';
 import './components/demo-login-form.js';

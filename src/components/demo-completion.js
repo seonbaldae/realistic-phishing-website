@@ -11,6 +11,9 @@ class DemoCompletion extends HTMLElement {
         .card { padding: 55px 30px 43px; text-align: center; border: 1px solid #e2e8e4; border-top: 5px solid var(--green, #03c75a); border-radius: 12px; background: #fff; }
         .check { display: grid; width: 76px; height: 76px; margin: 0 auto 25px; place-items: center; border-radius: 50%; background: #edf9f1; color: #00ad4d; }
         .check svg { width: 37px; height: 37px; }
+        .brand { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 27px; }
+        .brand .form-icon { width: 27px; height: 27px; }
+        .brand .wordmark { width: 102px; height: auto; }
         .eyebrow { margin: 0 0 11px; color: #008c40; font-size: 12px; font-weight: 700; }
         h1 { margin: 0; color: #223329; font-size: 27px; letter-spacing: -1px; line-height: 1.5; }
         .message { margin: 17px 0 27px; color: #7b847e; font-size: 14px; line-height: 1.9; }
@@ -30,6 +33,7 @@ class DemoCompletion extends HTMLElement {
         }
       </style>
       <section class="card" aria-labelledby="completion-title">
+        <div class="brand"><img class="form-icon" src="./assets/naver-form-icon.svg" alt="네이버 폼" width="32" height="32"><img class="wordmark" src="./assets/naver-logo.svg" alt="NAVER" width="2315" height="444"></div>
         <div class="check" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="m10 20 7 7 14-15" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <p class="eyebrow">의견을 들려주셔서 감사합니다</p>
         <h1 id="completion-title" tabindex="-1">설문 참여가 완료되었어요</h1>

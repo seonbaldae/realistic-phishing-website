@@ -24,6 +24,7 @@ export class DemoSessionNotice extends HTMLElement {
         .lock { display: grid; place-items: center; width: 68px; height: 68px;
           margin: 4px auto 23px; border-radius: 50%; color: #03a94e; background: #eaf9ef; }
         .lock svg { width: 30px; height: 30px; }
+        .brand { display: block; width: 82px; height: auto; margin: 3px auto 22px; }
         h2 { margin: 0 0 13px; font-size: 24px; letter-spacing: -1px; line-height: 1.4; }
         .description { margin: 0; color: #657168; font-size: 14px; line-height: 1.8; word-break: keep-all; }
         .training { margin: 23px 0 26px; padding: 13px 12px; border-radius: 8px;
@@ -36,6 +37,7 @@ export class DemoSessionNotice extends HTMLElement {
         <button class="close" type="button" aria-label="안내 닫기">
           <svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 6 12 12M18 6 6 18"/></svg>
         </button>
+        <img class="brand" src="./assets/naver-logo.svg" alt="NAVER" width="2315" height="444">
         <div class="lock" aria-hidden="true">
           <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="14" width="18" height="14" rx="4"/><path d="M11 14V9a5 5 0 0 1 10 0v5"/><path d="M16 20v3" stroke-linecap="round"/></svg>
         </div>
