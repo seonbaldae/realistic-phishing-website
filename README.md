@@ -14,6 +14,10 @@ python3 -m http.server 8080 --bind 127.0.0.1
 
 ## GitHub → Vercel 자동 배포
 
+배포 주소: [realistic-phishing-website.vercel.app](https://realistic-phishing-website.vercel.app/) · [Vercel 프로젝트](https://vercel.com/naruterides-projects/realistic-phishing-website)
+
+`seonbaldae/realistic-phishing-website` 저장소가 연결되어 있으며 Production Branch는 `main`입니다. 아래는 같은 연결을 다시 구성할 때의 절차입니다.
+
 `vercel.json`에 정적 사이트 설정이 포함되어 있습니다. 프레임워크는 **Other**, 설치·빌드 명령은 비워 두고, 출력 디렉토리는 **`.`**(저장소 루트)를 사용합니다. 의존성이나 환경 변수는 필요하지 않습니다.
 
 자동 배포에는 Vercel과 GitHub 저장소를 최초 한 번 연결해야 합니다. 설정 파일을 푸시하는 것만으로 계정 연결이 만들어지지는 않습니다.
