@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light;
+  --font: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
+  --green: #03a94d;
+  --green-dark: #008f40;
+  --green-light: #effaf3;
+  --ink: #202724;
+  --muted: #727a76;
+  --line: #e7ebe8;
+  --surface: #fff;
+  --radius: 16px;
+  font-family: var(--font);
+  color: var(--ink);
+  background: #f5f7f6;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; }
+noscript { display: block; margin: 32px; }
+::selection { background: #c6f1d8; }
