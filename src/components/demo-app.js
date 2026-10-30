@@ -16,14 +16,14 @@ export class DemoApp extends HTMLElement {
         .breadcrumb { display: flex; align-items: center; gap: 10px; margin: 0 0 17px 2px; font-size: 11px; color: #8b948e; }
         .breadcrumb svg { color: #9ba49d; } .breadcrumb span:last-child { color: #58655c; }
         .footer { width: min(100% - 40px, 780px); margin: 28px auto 30px; text-align: center; color: #a1a8a2; font-size: 10px; }
-        .footer p { margin-bottom: 13px; line-height: 1.8; } .footer strong { font-family: Arial, sans-serif; font-size: 13px; font-weight: 900; letter-spacing: -.6px; color: #8f9c93; } .footer .form { font-size: 13px; font-weight: 700; margin-left: 3px; }
+        .footer p { margin-bottom: 13px; line-height: 1.8; } .footer-brand { display: inline-flex; align-items: center; gap: 4px; vertical-align: middle; } .footer-brand img { display: block; width: 61px; height: auto; } .footer .form { font-size: 13px; font-weight: 700; color: #03c75a; }
         @media(max-width: 600px) { main { width: calc(100% - 32px); margin-top: 23px; } .breadcrumb { margin-bottom: 14px; } .footer { margin-top: 25px; } }
       </style>
       <button type="button" class="skip">본문으로 건너뛰기</button>
       <demo-training-notice></demo-training-notice>
       <demo-header></demo-header>
       <main id="main" tabindex="-1"><nav class="breadcrumb" aria-label="현재 위치"><span>네이버 폼</span><svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="m3.5 2 3 3-3 3" stroke="currentColor"/></svg><span id="location">설문 참여</span></nav><div id="view"></div></main>
-      <footer class="footer"><p>본 페이지는 해커톤 시연을 위한 가상 설문이며, 네이버에서 운영하는 서비스가 아닙니다.</p><strong>NAVER</strong><span class="form">폼</span><span> · 보안 훈련 데모</span></footer>
+      <footer class="footer"><p>본 페이지는 해커톤 시연을 위한 가상 설문이며, 네이버에서 운영하는 서비스가 아닙니다.</p><span class="footer-brand"><img src="./assets/naver-logo.svg" alt="NAVER" width="2315" height="444"><span class="form">폼</span></span><span> · 보안 훈련 데모</span></footer>
       <demo-session-notice></demo-session-notice>`;
   }
   connectedCallback() {

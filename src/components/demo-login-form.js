@@ -17,8 +17,8 @@ export class DemoLoginForm extends HTMLElement {
         .back:hover { color: #172d22; }
         .card { overflow: hidden; border: 1px solid #e0e6e1; border-radius: 14px; background: #fff;
           box-shadow: 0 6px 24px #183b2205; }
-        .brand { margin: 34px 0 24px; text-align: center; color: #03c75a; font-family: Arial, sans-serif;
-          font-size: 37px; font-weight: 900; letter-spacing: -1.8px; }
+        .brand { display: flex; justify-content: center; margin: 39px 0 31px; }
+        .brand img { display: block; width: 155px; height: auto; }
         .tab { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0 30px;
           padding: 16px 0; border: 1px solid #dce4df; border-bottom: 2px solid #03c75a;
           border-radius: 8px 8px 0 0; color: #193b27; font-size: 14px; font-weight: 700; }
@@ -46,11 +46,11 @@ export class DemoLoginForm extends HTMLElement {
         .page-note { padding: 20px 10px 0; margin: 0; color: #8d978f; font-size: 11px;
           line-height: 1.8; text-align: center; word-break: keep-all; }
         @media (max-width: 460px) { .content { padding: 25px 22px 22px; } .tab { margin: 0 22px; }
-          .brand { margin-top: 28px; font-size: 34px; } h1 { font-size: 21px; } }
+          .brand { margin-top: 33px; } .brand img { width: 145px; } h1 { font-size: 21px; } }
       </style>
       <button class="back" type="button"><span aria-hidden="true">←</span> 설문으로 돌아가기</button>
       <section class="card" aria-labelledby="login-title">
-        <p class="brand" aria-label="네이버 스타일 모의 로그인">NAVER</p>
+        <div class="brand"><img src="./assets/naver-logo.svg" alt="NAVER" width="2315" height="444"></div>
         <div class="tab">
           <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="12" cy="10" r="2.5"/><path d="M7 18c0-5 10-5 10 0"/></svg>
           ID 로그인

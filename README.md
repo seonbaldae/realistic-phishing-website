@@ -44,6 +44,8 @@ python3 -m http.server 8080 --bind 127.0.0.1
 
 `src/components/`에 UI 컴포넌트, `src/data/survey.js`에 설문 소개, `src/styles/`에 공통 토큰과 스타일이 있습니다. 커버 일러스트는 직접 작성한 정적 SVG입니다. 실제 네이버 페이지 소스나 인증 스크립트는 포함하지 않습니다.
 
+헤더·로그인·푸터의 NAVER 로고는 [네이버 공식 브랜드 리소스](https://www.navercorp.com/company/brandGuide)의 원본 `Logotype_Green.svg`입니다. [공식 배포 자료](https://static-homepage.pstatic.net/cdn-static/naver/download/NaverBrand_Resource.zip)에서 가져온 파일을 `assets/naver-logo.svg`에 그대로 보관하고 `<img>`로 표시합니다. 로고 이미지는 같은 출처에서 제공하며 색상·비율을 변형하지 않습니다.
+
 분석기에서 입력 필드 등을 검사할 때는 각 요소의 `shadowRoot` 안까지 순회해야 합니다. Shadow DOM은 보안 격리가 아니며, 이 저장소에는 QR 분석 API나 격리 Worker가 포함되지 않습니다.
 
 이 페이지는 해커톤 보안 훈련용으로 표시된 모의 서비스입니다. 실제 계정 정보를 입력하지 마세요. 정적 서버 로그에는 자산 요청 경로만 남으며, 시연 상태는 새로고침하면 초기화됩니다.
