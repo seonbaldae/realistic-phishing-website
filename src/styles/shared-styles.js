@@ -3,13 +3,14 @@ export const sharedStyles = `
   :host([hidden]), [hidden] { display: none !important; }
   *, *::before, *::after { box-sizing: border-box; }
   h1, h2, h3, p { margin: 0; }
+  h1, h2, h3 { word-break: keep-all; overflow-wrap: break-word; }
   button, input, textarea, select { font: inherit; }
   button { -webkit-tap-highlight-color: transparent; }
   button:not(:disabled), label { cursor: pointer; }
   button:disabled { cursor: wait; opacity: .65; }
   button, input, a { outline-offset: 4px; }
   :focus-visible { outline: 3px solid #167a44; outline-offset: 4px; }
-  [tabindex="-1"]:focus:not(:focus-visible) { outline: none; }
+  [tabindex="-1"]:focus { outline: none; }
   .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 12px 24px; border: 1px solid transparent; border-radius: 8px; font-size: 15px; font-weight: 700; line-height: 1.5; text-decoration: none; transition: background .15s ease, border-color .15s ease; }
   .primary { color: #fff; background: var(--green, #03a94d); }
   .primary:hover:not(:disabled) { background: var(--green-dark, #008f40); }
